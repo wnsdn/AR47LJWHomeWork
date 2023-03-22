@@ -27,7 +27,6 @@ void Damage(const char* const _AttName, const char* const _DefName, const int& _
 
 int main()
 {
-
     while (true)
     {
         system("cls");
