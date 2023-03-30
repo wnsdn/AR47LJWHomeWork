@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="230330_Homework.cpp" />
     <ClCompile Include="ConsoleGameScreen.cpp">
       <Filter>Level1</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Level2</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Level2</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Bullet.cpp">
+    <ClCompile Include="ShootingGame.cpp">
       <Filter>Level2</Filter>
     </ClCompile>
   </ItemGroup>
@@ -19,22 +22,25 @@
     <ClInclude Include="ConsoleGameScreen.h">
       <Filter>Level1</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Level2</Filter>
+    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Level2</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h">
+    <ClInclude Include="ShootingGame.h">
       <Filter>Level2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Level0">
-      <UniqueIdentifier>{4410d543-2148-4c4b-9786-8bc7f745de30}</UniqueIdentifier>
+      <UniqueIdentifier>{0b0c6d8b-6c38-43f4-a42f-2c6f28fb573e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Level1">
-      <UniqueIdentifier>{0139e649-15ac-4b31-ac10-2c51f35b52cf}</UniqueIdentifier>
+      <UniqueIdentifier>{7d8ab842-a74e-41ea-bb38-73901e19e228}</UniqueIdentifier>
     </Filter>
     <Filter Include="Level2">
-      <UniqueIdentifier>{ae3cdbbd-0cb3-4996-8ef6-26a1d177e8b2}</UniqueIdentifier>
+      <UniqueIdentifier>{7ab2c38a-a005-4062-a23a-bff102349bee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
