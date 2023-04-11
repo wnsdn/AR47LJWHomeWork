@@ -63,7 +63,7 @@ public:
 	}
 	GameEngineArray(const int _size)
 		: m_Data(nullptr)
-		, m_Size(0)
+		, m_Size(_size)
 	{
 		Resize(_size);
 	}
@@ -75,13 +75,6 @@ public:
 			m_Data = nullptr;
 		}
 	}
-
-	//GameEngineArray(const GameEngineArray& _ref) = delete;
-	//GameEngineArray(GameEngineArray&& _ref) noexcept = delete;
-	//GameEngineArray& operator=(const GameEngineArray& _ref) = delete;
-	//GameEngineArray& operator=(GameEngineArray&& _ref) noexcept = delete;
-protected:
-
 private:
 	DataType* m_Data;
 	int m_Size;

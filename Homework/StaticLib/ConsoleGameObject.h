@@ -1,8 +1,8 @@
 #pragma once
 
-#include "GameEngineMath.h"
+#include "ConsoleGameMath.h"
 
-class GameEngineObject
+class ConsoleGameObject
 {
 public:
 	virtual void Update();
@@ -44,13 +44,13 @@ public:
 		return m_bDeath;
 	}
 
-	GameEngineObject();
-	~GameEngineObject();
+	ConsoleGameObject();
+	~ConsoleGameObject();
 
-	GameEngineObject(const GameEngineObject& _ref) = delete;
-	GameEngineObject(GameEngineObject&& _ref) noexcept = delete;
-	GameEngineObject& operator=(const GameEngineObject& _ref) = delete;
-	GameEngineObject& operator=(GameEngineObject&& _ref) noexcept = delete;
+	ConsoleGameObject(const ConsoleGameObject& _ref) = delete;
+	ConsoleGameObject(ConsoleGameObject&& _ref) noexcept = delete;
+	ConsoleGameObject& operator=(const ConsoleGameObject& _ref) = delete;
+	ConsoleGameObject& operator=(ConsoleGameObject&& _ref) noexcept = delete;
 protected:
 
 private:

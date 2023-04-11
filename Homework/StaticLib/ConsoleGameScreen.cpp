@@ -1,10 +1,10 @@
-#include "GameEngineScreen.h"
+#include "ConsoleGameScreen.h"
 
 #include <iostream>
 
-GameEngineScreen GameEngineScreen::MainScreen;
+ConsoleGameScreen ConsoleGameScreen::MainScreen;
 
-void GameEngineScreen::SetScreenSize(const int2& _size)
+void ConsoleGameScreen::SetScreenSize(const int2& _size)
 {
 	m_Size = _size;
 
@@ -15,7 +15,7 @@ void GameEngineScreen::SetScreenSize(const int2& _size)
 	}
 }
 
-void GameEngineScreen::ScreenClear()
+void ConsoleGameScreen::ScreenClear()
 {
 	system("cls");
 
@@ -28,7 +28,7 @@ void GameEngineScreen::ScreenClear()
 	}
 }
 
-void GameEngineScreen::ScreenPrint() const
+void ConsoleGameScreen::ScreenPrint() const
 {
 	for (int y = 0; y < m_Size.y; ++y)
 	{
@@ -41,7 +41,7 @@ void GameEngineScreen::ScreenPrint() const
 	}
 }
 
-bool GameEngineScreen::IsScreenOver(const int2& _pos) const
+bool ConsoleGameScreen::IsScreenOver(const int2& _pos) const
 {
 	if (_pos.x >= 0 && _pos.x < m_Size.x &&
 		_pos.y >= 0 && _pos.y < m_Size.y)
@@ -52,7 +52,7 @@ bool GameEngineScreen::IsScreenOver(const int2& _pos) const
 	return true;
 }
 
-void GameEngineScreen::SetScreenCharacter(const int2& _pos, const char _ch) const
+void ConsoleGameScreen::SetScreenCharacter(const int2& _pos, const char _ch) const
 {
 	if (true == IsScreenOver(_pos))
 	{
@@ -62,10 +62,10 @@ void GameEngineScreen::SetScreenCharacter(const int2& _pos, const char _ch) cons
 	m_Arr[_pos.y][_pos.x] = _ch;
 }
 
-GameEngineScreen::GameEngineScreen()
+ConsoleGameScreen::ConsoleGameScreen()
 {
 }
 
-GameEngineScreen::~GameEngineScreen()
+ConsoleGameScreen::~ConsoleGameScreen()
 {
 }

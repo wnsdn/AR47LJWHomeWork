@@ -25,7 +25,8 @@ void Player::Update()
 	case 'W':
 	{
 		NextPos.y -= 1;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos)
+			&& false == IsBomb(NextPos))
 		{
 			SetPos(NextPos);
 		}
@@ -35,7 +36,8 @@ void Player::Update()
 	case 'S':
 	{
 		NextPos.y += 1;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos)
+			&& false == IsBomb(NextPos))
 		{
 			SetPos(NextPos);
 		}
@@ -45,7 +47,8 @@ void Player::Update()
 	case 'A':
 	{
 		NextPos.x -= 1;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos)
+			&& false == IsBomb(NextPos))
 		{
 			SetPos(NextPos);
 		}
@@ -55,7 +58,8 @@ void Player::Update()
 	case 'D':
 	{
 		NextPos.x += 1;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos)
+			&& false == IsBomb(NextPos))
 		{
 			SetPos(NextPos);
 		}
@@ -77,6 +81,24 @@ void Player::Update()
 		break;
 	}
 	}
+}
+
+bool Player::IsBomb(const int2& _NextPos) const
+{
+	GameEngineArray<ConsoleGameObject*>& BombGroup
+		= ConsoleObjectManager::GetGroup(ObjectOrder::Bomb);
+
+	int Size = BombGroup.Size();
+	for (int i = 0; i < Size; ++i)
+	{
+		int2 BombPos = BombGroup[i]->GetPos();
+		if (BombGroup[i]->GetUpdate() && _NextPos == BombPos)
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
 
 Player::Player()

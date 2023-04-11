@@ -8,6 +8,7 @@ public:
 	static bool IsGameUpdate;
 
 	void Update() override;
+	bool IsBomb(const int2& _NextPos) const;
 
 	Player();
 	~Player();
