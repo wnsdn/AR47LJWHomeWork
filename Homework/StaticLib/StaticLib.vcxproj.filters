@@ -30,6 +30,9 @@
     <ClInclude Include="ConsoleGameScreen.h">
       <Filter>ConsoleGame</Filter>
     </ClInclude>
+    <ClInclude Include="GameEngineList.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GameEngine">
