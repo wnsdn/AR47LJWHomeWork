@@ -7,18 +7,19 @@ class Bomb : public Object
 public:
 	void Update() override;
 
-	static int Get_MaxPower()
+	static int Get_Power()
 	{
-		return m_MaxPower;
+		return m_Power;
 	}
-	static void Set_MaxPower(const int _MaxPower)
+	static void Set_Power(const int _Power)
 	{
-		m_MaxPower = _MaxPower;
+		m_Power = _Power;
 	}
 
 	Bomb()
 		: m_Count(8)
 		, m_CurPower(0)
+		, m_MaxPower(m_Power)
 	{
 		Set_RenderChar('@');
 	}
@@ -31,5 +32,7 @@ public:
 private:
 	int m_Count;
 	int m_CurPower;
-	static int m_MaxPower;
+	int m_MaxPower;
+
+	static int m_Power;
 };

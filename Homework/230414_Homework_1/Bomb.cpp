@@ -2,7 +2,7 @@
 
 #include <StaticLib/ConsoleGameScreen.h>
 
-int Bomb::m_MaxPower = 1;
+int Bomb::m_Power = 1;
 
 void Bomb::Update()
 {

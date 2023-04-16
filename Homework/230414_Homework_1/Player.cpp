@@ -124,7 +124,7 @@ void Player::IsItem(const Point& _pt) const
 		if (obj->Get_Pt() == _pt)
 		{
 			obj->Set_Active(false);
-			Bomb::Set_MaxPower(Bomb::Get_MaxPower() + 1);
+			Bomb::Set_Power(Bomb::Get_Power() + 1);
 		}
 	}
 }

@@ -2,6 +2,7 @@
 
 #include <StaticLib/ConsoleGameScreen.h>
 #include <StaticLib/ObjectManager.h>
+#include <StaticLib/Random.h>
 
 #include "Player.h"
 #include "Item.h"
@@ -11,7 +12,7 @@ int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	//_CrtSetBreakAlloc(186);
-
+	Random::Init();
 	ConsoleGameScreen::Get_MainScreen().Set_Size(20, 10);
 
 	ObjectManager::Init(ObjectGroup::End);
