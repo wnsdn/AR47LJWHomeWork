@@ -168,11 +168,6 @@
       </SubType>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StaticLib\StaticLib.vcxproj">
-      <Project>{4341993b-562e-4eb9-aca2-fa337d46fdad}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

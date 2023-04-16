@@ -139,11 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StaticLib\StaticLib.vcxproj">
-      <Project>{4341993b-562e-4eb9-aca2-fa337d46fdad}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Bomb.cpp" />
     <ClCompile Include="ConsoleObjectManager.cpp" />
     <ClCompile Include="main.cpp" />

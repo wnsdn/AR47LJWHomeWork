@@ -1,21 +1,21 @@
 #include "ConsoleGameScreen.h"
 
-#include <iostream>
+#include <Windows.h>
 
-ConsoleGameScreen ConsoleGameScreen::MainScreen;
+ConsoleGameScreen ConsoleGameScreen::s_MainScreen;
 
-void ConsoleGameScreen::SetScreenSize(const int2& _size)
+void ConsoleGameScreen::Update()
 {
-	m_Size = _size;
-
-	m_Arr.Resize(m_Size.y);
-	for (int i = 0; i < m_Size.y; ++i)
+	for (int y = 0; y < m_Size.y; ++y)
 	{
-		m_Arr[i].Resize(m_Size.x);
+		for (int x = 0; x < m_Size.x; ++x)
+		{
+			m_Screen[y][x] = 'a';
+		}
 	}
 }
 
-void ConsoleGameScreen::ScreenClear()
+void ConsoleGameScreen::Render() const
 {
 	system("cls");
 
@@ -23,49 +23,11 @@ void ConsoleGameScreen::ScreenClear()
 	{
 		for (int x = 0; x < m_Size.x; ++x)
 		{
-			m_Arr[y][x] = 'a';
-		}
-	}
-}
-
-void ConsoleGameScreen::ScreenPrint() const
-{
-	for (int y = 0; y < m_Size.y; ++y)
-	{
-		for (int x = 0; x < m_Size.x; ++x)
-		{
-			printf_s("%c", m_Arr[y][x]);
+			printf_s("%c", m_Screen[y][x]);
 		}
 
 		putchar('\n');
 	}
-}
 
-bool ConsoleGameScreen::IsScreenOver(const int2& _pos) const
-{
-	if (_pos.x >= 0 && _pos.x < m_Size.x &&
-		_pos.y >= 0 && _pos.y < m_Size.y)
-	{
-		return false;
-	}
-
-	return true;
-}
-
-void ConsoleGameScreen::SetScreenCharacter(const int2& _pos, const char _ch) const
-{
-	if (true == IsScreenOver(_pos))
-	{
-		return;
-	}
-
-	m_Arr[_pos.y][_pos.x] = _ch;
-}
-
-ConsoleGameScreen::ConsoleGameScreen()
-{
-}
-
-ConsoleGameScreen::~ConsoleGameScreen()
-{
+	Sleep(m_ScreenUpdateRate);
 }
