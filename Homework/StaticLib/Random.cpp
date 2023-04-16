@@ -2,6 +2,11 @@
 
 #include <iostream>
 
+void Random::Init()
+{
+	srand((int)time(nullptr));
+}
+
 int Random::RandomInt(int _Min, int _Max)
 {
 	return (rand() % (_Max - _Min + 1)) + _Min;
@@ -9,8 +14,6 @@ int Random::RandomInt(int _Min, int _Max)
 
 Random::Random()
 {
-	m_Seed = (int)time(nullptr);
-	srand(m_Seed);
 }
 
 Random::~Random()

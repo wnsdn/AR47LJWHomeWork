@@ -7,6 +7,16 @@ struct Point
 	int x;
 	int y;
 
+	enum class Dir
+	{
+		Left,
+		Right,
+		Up,
+		Down,
+
+		End,
+	};
+
 	bool operator==(const Point& _pt) const
 	{
 		return x == _pt.x && y == _pt.y;

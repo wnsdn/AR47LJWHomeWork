@@ -3,6 +3,7 @@
 class Random
 {
 public:
+	static void Init();
 	static int RandomInt(int _Min, int _Max);
 
 private:

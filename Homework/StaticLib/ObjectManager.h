@@ -34,6 +34,12 @@ public:
 	{
 		return AllObject[(int)_group];
 	}
+
+	template <typename DataType>
+	static int Get_GroupSize(DataType _group)
+	{
+		return (int)AllObject[(int)_group].size();
+	}
 private:
 	static vector<list<Object*>> AllObject;
 

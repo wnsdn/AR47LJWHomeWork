@@ -6,6 +6,7 @@ class Object
 {
 public:
 	virtual void Update();
+	virtual void Delete();
 
 	const Point& Get_Pt() const
 	{

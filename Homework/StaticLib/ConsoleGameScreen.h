@@ -64,6 +64,11 @@ public:
 		m_ScreenUpdateRate = _ScreenUpdateRate;
 	}
 
+	const vector<vector<char>>& Get_ScreenArr() const
+	{
+		return m_Screen;
+	}
+
 private:
 	static ConsoleGameScreen s_MainScreen;
 
@@ -73,7 +78,7 @@ private:
 
 	ConsoleGameScreen() 
 		: m_Screen()
-		, m_Size(20, 10)
+		, m_Size(0, 0)
 		, m_ScreenUpdateRate(150)
 	{
 		m_Screen.resize(m_Size.y, vector<char>(m_Size.x));
