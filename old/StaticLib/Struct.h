@@ -2,20 +2,13 @@
 
 struct Point
 {
-	static const Point Dir[4];
+	static const Point Left;
+	static const Point Right;
+	static const Point Up;
+	static const Point Down;
 
 	int x;
 	int y;
-
-	enum class Dir
-	{
-		Left,
-		Right,
-		Up,
-		Down,
-
-		End,
-	};
 
 	bool operator==(const Point& _pt) const
 	{
