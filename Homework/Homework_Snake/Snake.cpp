@@ -111,11 +111,6 @@ void Snake::Render()
 	}
 }
 
-void Snake::Delete()
-{
-	Body.clear();
-}
-
 Snake::Snake()
 	: Direction(0)
 {

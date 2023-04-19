@@ -12,8 +12,8 @@ int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	//_CrtSetBreakAlloc(169);
-	
-	ConsoleGameScreen::GetMainScreen().SetScreenSize({ 3, 2 });
+
+	ConsoleGameScreen::GetMainScreen().SetScreenSize({ 5, 5 });
 	ConsoleGameScreen::GetMainScreen().SetScreenUpdateRate(200);
 
 	ObjectManager::Init(ObjectGroup::End);

@@ -16,8 +16,3 @@ void Object::Render()
 
 	ConsoleGameScreen::GetMainScreen().SetScreenChar(Pt, RenderChar);
 }
-
-void Object::Delete()
-{
-
-}

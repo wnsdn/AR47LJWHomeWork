@@ -49,8 +49,6 @@ void ObjectManager::Delete()
 		{
 			if (obj)
 			{
-				obj->Delete();
-
 				delete obj;
 				obj = nullptr;
 			}

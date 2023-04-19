@@ -1,10 +1,12 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
 #include "Struct.h"
 
 using std::vector;
+using std::wstring;
 
 class ConsoleGameScreen
 {

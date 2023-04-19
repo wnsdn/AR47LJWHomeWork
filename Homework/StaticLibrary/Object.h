@@ -7,7 +7,6 @@ class Object
 public:
 	virtual void Update();
 	virtual void Render();
-	virtual void Delete();
 
 	const Point& GetPoint() const
 	{
@@ -41,7 +40,7 @@ public:
 		, RenderChar(' ')
 		, Active(true)
 	{}
-	~Object() {}
+	virtual ~Object() {}
 
 	Object(const Object& _ref) = delete;
 	Object(Object&& _ref) noexcept = delete;

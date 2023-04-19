@@ -15,7 +15,6 @@ public:
 
 	void Update() override;
 	void Render() override;
-	void Delete() override;
 
 	Snake();
 	~Snake() {}
