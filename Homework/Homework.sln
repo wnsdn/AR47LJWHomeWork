@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Homework_Snake", "Homework_
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{BCAD443B-3BFD-402B-9A15-2A25B608B6D7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Homework_Map", "Homework_Map\Homework_Map.vcxproj", "{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -43,6 +45,14 @@ Global
 		{C2BD6C1E-A163-42D0-B9E1-E36F57D6C123}.Release|x64.Build.0 = Release|x64
 		{C2BD6C1E-A163-42D0-B9E1-E36F57D6C123}.Release|x86.ActiveCfg = Release|Win32
 		{C2BD6C1E-A163-42D0-B9E1-E36F57D6C123}.Release|x86.Build.0 = Release|Win32
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Debug|x64.ActiveCfg = Debug|x64
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Debug|x64.Build.0 = Debug|x64
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Debug|x86.ActiveCfg = Debug|Win32
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Debug|x86.Build.0 = Debug|Win32
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Release|x64.ActiveCfg = Release|x64
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Release|x64.Build.0 = Release|x64
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Release|x86.ActiveCfg = Release|Win32
+		{9F026AF2-C577-4AC0-AD71-FE3F3D7932C4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
