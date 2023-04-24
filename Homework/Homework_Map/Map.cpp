@@ -57,14 +57,5 @@ int main()
 	}
 	putchar('\n');
 
-	_map.FirstOrder();
-	putchar('\n');
-
-	_map.MidOrder();
-	putchar('\n');
-
-	_map.LastOrder();
-	putchar('\n');
-
 	return 0;
 }

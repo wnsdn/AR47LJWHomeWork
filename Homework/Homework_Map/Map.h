@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
 
 template <typename Key, typename Value>
@@ -42,7 +41,6 @@ public:
 				return;
 			}
 
-			std::cout << P.first << ' ';
 			Left->FirstOrder();
 			Right->FirstOrder();
 		}
@@ -54,7 +52,6 @@ public:
 			}
 
 			Left->MidOrder();
-			std::cout << P.first << ' ';
 			Right->MidOrder();
 		}
 		void LastOrder()
@@ -66,7 +63,7 @@ public:
 
 			Left->LastOrder();
 			Right->LastOrder();
-			std::cout << P.first << ' ';
+			delete this;
 		}
 
 		Node()
@@ -312,25 +309,6 @@ public:
 		}
 	}
 
-	void FirstOrder()
-	{
-		EndNode(Root)->Right = nullptr;
-		Root->FirstOrder();
-		EndNode(Root)->Right = End;
-	}
-	void MidOrder()
-	{
-		EndNode(Root)->Right = nullptr;
-		Root->MidOrder();
-		EndNode(Root)->Right = End;
-	}
-	void LastOrder()
-	{
-		EndNode(Root)->Right = nullptr;
-		Root->LastOrder();
-		EndNode(Root)->Right = End;
-	}
-
 	Map()
 		: Root(nullptr)
 		, End(new Node)
@@ -338,24 +316,7 @@ public:
 	}
 	~Map()
 	{
-		std::vector<Node*> NodeArr;
-		Node* CurNode = BeginNode(Root);
-		while (true)
-		{
-			NodeArr.push_back(CurNode);
-
-			if (CurNode == End)
-			{
-				break;
-			}
-
-			CurNode = NextNode(CurNode);
-		}
-
-		for (int i = 0; i < NodeArr.size(); ++i)
-		{
-			delete NodeArr[i];
-		}
+		Root->LastOrder();
 	}
 private:
 	Node* Root;
